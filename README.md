@@ -83,9 +83,28 @@ python -m http.server 8000
 
 ---
 
-Si quieres, puedo:
-- Añadir el link de Behance y YouTube si los quieres crear ahora.
-- Preparar un workflow de GitHub Actions para desplegar automáticamente a GitHub Pages o Render.
-- Añadir una CTA en la hero o una imagen banner (`banner.jpg`) y ajustar estilos.
+### # Marketplace Pastel
 
-Dime qué prefieres y lo dejo listo.
+Marketplace Pastel es una landing page moderna y atractiva para exhibir productos en tonos pastel. Está diseñada para cautivar a los visitantes con una presentación visualmente agradable y descripciones detalladas de cada producto, sin enlaces externos ni navegación adicional, ideal para campañas, lanzamientos o portafolios.
+
+## Características principales
+- Diseño responsive con paleta de colores pastel
+- Banner de bienvenida con descripción del marketplace
+- Sección de productos con descripciones, íconos y precios
+- Sin links a otras páginas, navegación simple
+- Footer con créditos y derechos
+
+## Estructura del proyecto
+- `index.html`: Página principal con todo el contenido y estilos embebidos
+- `README.md`: Documentación del proyecto
+- `LICENCE`: Archivo de licencia (ver detalles abajo)
+
+## Cómo usar
+1. Clona el repositorio
+2. Abre `index.html` en tu navegador
+3. Personaliza los productos y estilos según tus necesidades
+
+## Créditos
+Diseño y desarrollo por marulandia
+
+---
