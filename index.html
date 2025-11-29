@@ -3,55 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace Pastel</title>
+    <title>Marketplace Pastel - Landing</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
         body {
             font-family: "Poppins", sans-serif;
-            background: linear-gradient(135deg, #f5e6f3 0%, #e8f4f8 50%, #f9e6f0 100%);
+            background: radial-gradient(circle at top left, #fbe7ff 0%, #e8f4f8 45%, #fdf2f5 100%);
             color: #5a4a6b;
-            min-height: 100vh;
+            margin: 0;
         }
 
-        /* Header / Navbar */
+        /* Navbar simple (sin links a otras páginas) */
         .navbar {
-            background: rgba(255, 255, 255, 0.85) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 15px rgba(139, 111, 179, 0.1);
-            border: none !important;
-            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 4px 20px rgba(139, 111, 179, 0.12);
+            padding: 0.75rem 0;
         }
 
         .navbar-brand {
             font-weight: 700;
-            font-size: 1.5rem;
-            background: linear-gradient(135deg, #d4a5d9, #b39cd9);
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, #d4a5d9, #b39cd9, #f7b2d9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
-        .navbar-brand small {
-            color: #c47e95 !important;
-            font-weight: 600;
+        .navbar small {
+            display: block;
+            font-size: 0.75rem;
+            color: #c47e95;
+            font-weight: 500;
         }
 
-        /* Hero Banner */
+        .btn-pastel-solid {
+            border-radius: 999px;
+            padding: 0.45rem 1.1rem;
+            font-size: 0.85rem;
+            border: none;
+            background: linear-gradient(135deg, #f9c5d1, #f6e0ff);
+            color: #6b4a8b;
+            box-shadow: 0 4px 12px rgba(201, 149, 185, 0.35);
+        }
+
+        .btn-pastel-solid:hover {
+            opacity: 0.95;
+        }
+
+        .btn-pastel-outline {
+            border-radius: 999px;
+            border: 1px solid #e2c5ff;
+            padding: 0.45rem 1.1rem;
+            font-size: 0.85rem;
+            color: #8b6fb3;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-pastel-outline:hover {
+            background: #f3e4ff;
+        }
+
+        /* Hero */
         .hero-section {
-            background: linear-gradient(135deg, #f0d9f0 0%, #e0ecf5 50%, #fce4f0 100%);
-            padding: 80px 0 60px;
-            text-align: center;
+            background: linear-gradient(135deg, #f5def9 0%, #e4f0ff 50%, #ffe7f2 100%);
+            padding: 90px 0 60px;
             position: relative;
             overflow: hidden;
         }
@@ -59,60 +84,109 @@
         .hero-section::before {
             content: '';
             position: absolute;
-            width: 300px;
-            height: 300px;
-            background: rgba(212, 165, 217, 0.2);
+            width: 280px;
+            height: 280px;
+            background: rgba(212, 165, 217, 0.18);
             border-radius: 50%;
-            top: -50px;
-            right: -50px;
-            z-index: 0;
+            top: -60px;
+            right: -40px;
         }
 
         .hero-section::after {
             content: '';
             position: absolute;
-            width: 200px;
-            height: 200px;
-            background: rgba(196, 126, 149, 0.15);
+            width: 220px;
+            height: 220px;
+            background: rgba(196, 126, 149, 0.14);
             border-radius: 50%;
-            bottom: -30px;
+            bottom: -50px;
             left: -30px;
-            z-index: 0;
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
+            text-align: center;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(212, 165, 217, 0.4);
+            font-size: 0.8rem;
+            color: #8b6fb3;
+            margin-bottom: 1rem;
         }
 
         .hero-title {
             font-weight: 700;
             font-size: 3rem;
-            background: linear-gradient(135deg, #b39cd9, #d4a5d9);
+            background: linear-gradient(135deg, #b39cd9, #d4a5d9, #f7b2d9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
+            margin-bottom: 0.7rem;
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #8b6fb3;
-            font-weight: 400;
             margin-bottom: 0.5rem;
         }
 
         .hero-description {
             font-size: 1rem;
-            color: #9d7eb5;
-            max-width: 600px;
-            margin: 0 auto;
+            color: #9b7fb7;
+            max-width: 680px;
+            margin: 0 auto 1.8rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        /* Sección beneficios */
+        .benefits-section {
+            padding: 40px 0 10px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 18px;
+            padding: 20px 18px;
+            box-shadow: 0 8px 20px rgba(139, 111, 179, 0.13);
+            border: 1px solid rgba(212, 165, 217, 0.3);
+            height: 100%;
+        }
+
+        .benefit-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #7b5ea8;
+            margin-bottom: 0.3rem;
+        }
+
+        .benefit-text {
+            font-size: 0.9rem;
+            color: #7a6a8a;
             line-height: 1.6;
         }
 
-        /* Products Section */
+        /* Productos */
         .products-section {
-            padding: 60px 0;
+            padding: 40px 0 60px;
         }
 
         .section-title {
@@ -120,22 +194,28 @@
             font-size: 2rem;
             color: #8b6fb3;
             font-weight: 700;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #9b7fb7;
+            max-width: 520px;
+            margin: 0 auto 35px;
         }
 
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-            margin-top: 24px;
+            gap: 26px;
         }
 
         .product-card {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(139, 111, 179, 0.15);
-            padding: 30px;
-            border: 2px solid rgba(212, 165, 217, 0.3);
+            border-radius: 22px;
+            box-shadow: 0 15px 35px rgba(139, 111, 179, 0.18);
+            padding: 24px;
+            border: 1px solid rgba(212, 165, 217, 0.4);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -144,46 +224,69 @@
         .product-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #d4a5d9, #c47e95, #f9b3d8);
+            top: -40px;
+            right: -40px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            opacity: 0.5;
+            pointer-events: none;
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(139, 111, 179, 0.25);
-            border-color: rgba(212, 165, 217, 0.6);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 45px rgba(139, 111, 179, 0.28);
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .product-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+
+        .badge-pill {
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.7);
         }
 
         .product-title {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: #8b6fb3;
-            margin-bottom: 0.8rem;
+            color: #6c538f;
+            margin-bottom: 0.4rem;
         }
 
         .product-description {
-            font-size: 0.95rem;
-            color: #7a6a8a;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            min-height: 60px;
+            font-size: 0.92rem;
+            color: #6d5c80;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+            min-height: 70px;
+        }
+
+        .product-extra {
+            font-size: 0.8rem;
+            color: #8f7aa5;
+            margin-bottom: 0.9rem;
         }
 
         .price-container {
             display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 1.5rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(212, 165, 217, 0.3);
+            align-items: baseline;
+            justify-content: space-between;
+            margin-top: 0.3rem;
+            padding-top: 0.9rem;
+            border-top: 1px solid rgba(212, 165, 217, 0.4);
         }
 
         .price-label {
@@ -193,46 +296,134 @@
         }
 
         .price {
-            font-size: 1.6rem;
-            color: #d4a5d9;
+            font-size: 1.4rem;
             font-weight: 700;
+        }
+
+        .price-note {
+            font-size: 0.8rem;
+            color: #9078a8;
+        }
+
+        .btn-card {
+            margin-top: 0.4rem;
+            border-radius: 999px;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.78rem;
+            border: none;
+            box-shadow: 0 4px 10px rgba(140, 103, 171, 0.35);
+            background: linear-gradient(135deg, #f9c5d1, #f6e0ff);
+            color: #6b4a8b;
+        }
+
+        .btn-card:hover {
+            opacity: 0.95;
+        }
+
+        /* Paletas por card */
+        .card-1 {
+            background: linear-gradient(145deg, #ffe6f0 0%, #fff7ff 50%, #fbe9ff 100%);
+            border-color: #f7c2da;
+        }
+
+        .card-1::before {
+            background: radial-gradient(circle, #ffcfe3, #f9b5d2);
+        }
+
+        .card-1 .price { color: #e480a3; }
+
+        .card-2 {
+            background: linear-gradient(145deg, #e2f5ff 0%, #f0fbff 50%, #e6f4ff 100%);
+            border-color: #b9e1ff;
+        }
+
+        .card-2::before {
+            background: radial-gradient(circle, #c2e7ff, #9fd7ff);
+        }
+
+        .card-2 .price { color: #6aa6cf; }
+
+        .card-3 {
+            background: linear-gradient(145deg, #f8f3ff 0%, #fdf6ff 40%, #f2e9ff 100%);
+            border-color: #d2c4ff;
+        }
+
+        .card-3::before {
+            background: radial-gradient(circle, #d2c4ff, #b7a3ff);
+        }
+
+        .card-3 .price { color: #8a76d8; }
+
+        /* Cómo funciona */
+        .how-section {
+            padding: 50px 0 40px;
+            background: linear-gradient(135deg, rgba(245, 222, 249, 0.7), rgba(228, 240, 255, 0.8));
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 18px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(139, 111, 179, 0.13);
+            border: 1px solid rgba(212, 165, 217, 0.3);
+            height: 100%;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.6rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #f9c5d1, #f6e0ff);
+            color: #6b4a8b;
+            font-size: 0.9rem;
+        }
+
+        .step-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #7b5ea8;
+            margin-bottom: 0.3rem;
+        }
+
+        .step-text {
+            font-size: 0.9rem;
+            color: #7a6a8a;
+            line-height: 1.6;
         }
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, rgba(212, 165, 217, 0.1), rgba(196, 126, 149, 0.1));
-            border-top: 2px solid rgba(212, 165, 217, 0.3);
-            padding: 40px 0 20px;
-            color: #8b6fb3;
-        }
-
-        .footer-content {
+            background: linear-gradient(135deg, rgba(212, 165, 217, 0.16), rgba(196, 126, 149, 0.16));
+            border-top: 2px solid rgba(212, 165, 217, 0.4);
+            padding: 25px 0 15px;
+            color: #7d6aa0;
             text-align: center;
-        }
-
-        .footer-text {
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-credit {
             font-size: 0.85rem;
-            color: #9d7eb5;
-            font-weight: 300;
+        }
+
+        .footer-highlight {
+            font-weight: 600;
+            color: #6b4f92;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .hero-subtitle {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
             }
 
             .section-title {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
 
             .cards-grid {
@@ -242,147 +433,257 @@
 
         @media (max-width: 480px) {
             .hero-title {
-                font-size: 1.6rem;
+                font-size: 1.9rem;
             }
 
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .product-card {
-                padding: 20px;
-            }
-
-            .product-title {
-                font-size: 1.2rem;
-            }
-
-            .price {
-                font-size: 1.3rem;
+            .hero-section {
+                padding-top: 80px;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">🎀 Marketplace Pastel</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Navbar / Header (sin links a otras páginas) -->
+    <nav class="navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <span class="navbar-brand">
+                    🎀 Marketplace Pastel
+                </span>
+                <small>Un rincón lleno de cosas suaves y bonitas</small>
+            </div>
+            <div class="d-none d-md-flex gap-2">
+                <button type="button" class="btn btn-pastel-outline">
+                    Ver catálogo destacado
+                </button>
+                <button type="button" class="btn btn-pastel-solid">
+                    Empezar ahora ✨
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Banner -->
+    <!-- Hero principal -->
     <header class="hero-section">
         <div class="container hero-content">
-            <h1 class="hero-title">Marketplace Pastel</h1>
-            <p class="hero-subtitle">Bienvenido a tu tienda de productos lindos</p>
-            <p class="hero-description">Descubre nuestra colección exclusiva de productos con diseño pastel. Cada artículo ha sido seleccionado con cuidado para brindarte lo mejor en estilo, calidad y elegancia.</p>
+            <div class="hero-pill">
+                🌸 Curaduría cuidadosa • Colores pastel • Detalles que alegran el día
+            </div>
+            <h1 class="hero-title">Tu landing de cosas lindas en tonos pastel</h1>
+            <p class="hero-subtitle">
+                Una selección de objetos pensados para que tu hogar, tu escritorio y tus momentos de pausa se sientan más suaves.
+            </p>
+            <p class="hero-description">
+                Este marketplace reúne productos en paletas pastel: decoración, papelería, bienestar y organización. 
+                Es una experiencia pensada para quienes aman los detalles delicados, los espacios acogedores y los objetos que cuentan historias.
+                Puedes usar esta landing para presentar tu catálogo, captar interés y mostrar tus productos estrella.
+            </p>
+            <div class="hero-cta">
+                <button type="button" class="btn btn-pastel-solid">
+                    Quiero ver los productos destacados
+                </button>
+                <button type="button" class="btn btn-pastel-outline">
+                    Saber cómo funciona la experiencia pastel
+                </button>
+            </div>
         </div>
     </header>
 
-
-    <!-- Main content -->
-    <main class="container products-section">
-        <h2 class="section-title">Nuestros Productos</h2>
-
-        <div class="cards-grid">
-            <!-- Producto 1 -->
-            <div class="product-card">
-                <div class="product-icon">💐</div>
-                <div class="product-title">Flores Secas Pastel</div>
-                <div class="product-description">
-                    Hermosa colección de flores secas seleccionadas en tonos pastel suave. Perfectas para decorar tu escritorio, sala o cualquier rincón especial. Incluye una variedad de flores naturales preservadas con cuidado para una larga duración.
+    <!-- Beneficios clave -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎨</div>
+                        <div class="benefit-title">Paletas pastel coherentes</div>
+                        <p class="benefit-text">
+                            Cada producto está pensando en combinación con el resto del catálogo, 
+                            para que puedas armar espacios armoniosos sin preocuparte por el contraste de colores.
+                        </p>
+                    </div>
                 </div>
-                <div class="price-container">
-                    <span class="price-label">Desde</span>
-                    <span class="price">$12.000</span>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🧺</div>
+                        <div class="benefit-title">Curaduría de productos</div>
+                        <p class="benefit-text">
+                            La selección incluye solo piezas que cumplen con criterios de calidad, estética y funcionalidad, 
+                            para que cada compra se sienta como un pequeño regalo bien elegido.
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Producto 2 -->
-            <div class="product-card">
-                <div class="product-icon">🕯️</div>
-                <div class="product-title">Velas Aromáticas</div>
-                <div class="product-description">
-                    Velas aromáticas hechas a mano con cera 100% natural en deliciosos aromas pastel. Fragancia suave y duradera que transforma cualquier espacio en un refugio de tranquilidad. Cada vela está cuidadosamente elaborada con ingredientes de calidad premium.
-                </div>
-                <div class="price-container">
-                    <span class="price-label">Desde</span>
-                    <span class="price">$9.900</span>
-                </div>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="product-card">
-                <div class="product-icon">🎨</div>
-                <div class="product-title">Set de Papelería Pastel</div>
-                <div class="product-description">
-                    Set completo de papelería en tonos pastel incluye libretas, pegatinas, washi tape y marcadores. Ideal para creatividad, bullet journaling o como regalo especial. Diseño moderno y funcional que hace cada anotación especial.
-                </div>
-                <div class="price-container">
-                    <span class="price-label">Desde</span>
-                    <span class="price">$15.500</span>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💌</div>
+                        <div class="benefit-title">Enfoque en la experiencia</div>
+                        <p class="benefit-text">
+                            Más que un carrito, es una experiencia: empaques cuidados, mensajes personalizados y una narrativa visual suave 
+                            desde la landing hasta la entrega.
+                        </p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Producto 4 -->
-            <div class="product-card">
-                <div class="product-icon">🧴</div>
-                <div class="product-title">Accesorios de Baño</div>
-                <div class="product-description">
-                    Colección exclusiva de accesorios de baño en colores pastel suave. Incluye jabones artesanales, sales de baño aromáticas y accesorios decorativos. Todos nuestros productos son biodegradables y amigables con el ambiente.
-                </div>
-                <div class="price-container">
-                    <span class="price-label">Desde</span>
-                    <span class="price">$8.500</span>
-                </div>
-            </div>
+    <!-- Productos destacados -->
+    <main class="products-section">
+        <div class="container">
+            <h2 class="section-title">Productos destacados en tonos pastel</h2>
+            <p class="section-subtitle">
+                Esta sección muestra algunos ejemplos de cómo se vería tu catálogo dentro del marketplace: 
+                tarjetas con descripciones claras, precios y botones de acción, todo en una estética pastel coherente.
+            </p>
 
-            <!-- Producto 5 -->
-            <div class="product-card">
-                <div class="product-icon">🛋️</div>
-                <div class="product-title">Cojines Decorativos</div>
-                <div class="product-description">
-                    Cojines suaves y cómodos en tonos pastel que agregan calidez a cualquier espacio. Hechos con telas de alta calidad y relleno premium. Perfectos para sala, dormitorio o área de lectura, combinan estilo y confort.
+            <div class="cards-grid">
+                <!-- Producto 1 -->
+                <div class="product-card card-1">
+                    <div class="product-header">
+                        <div class="product-icon">💐</div>
+                        <span class="badge-pill">Decoración floral</span>
+                    </div>
+                    <div class="product-title">Ramo de flores secas pastel</div>
+                    <div class="product-description">
+                        Un arreglo de flores secas en tonos rosa, lila y crema, ideal para escritorios, 
+                        repisas o espacios pequeños. No requiere mantenimiento y mantiene su encanto durante meses, 
+                        aportando calidez y un toque romántico a cualquier rincón.
+                    </div>
+                    <div class="product-extra">
+                        Incluye tarjeta para mensaje breve y embalaje reutilizable en papel kraft con cinta pastel.
+                    </div>
+                    <div class="price-container">
+                        <div>
+                            <div class="price-label">Desde</div>
+                            <div class="price">$12.000</div>
+                            <div class="price-note">Formato mediano • 2 variantes de color</div>
+                        </div>
+                        <button type="button" class="btn-card">
+                            Ver más detalles
+                        </button>
+                    </div>
                 </div>
-                <div class="price-container">
-                    <span class="price-label">Desde</span>
-                    <span class="price">$14.200</span>
-                </div>
-            </div>
 
-            <!-- Producto 6 -->
-            <div class="product-card">
-                <div class="product-icon">📚</div>
-                <div class="product-title">Organizadores Pastel</div>
-                <div class="product-description">
-                    Organizadores y cajas de almacenamiento en diseño pastel minimalista. Mantén tus espacios ordenados y organizados con estilo. Materiales resistentes y duraderos en diferentes tamaños para todas tus necesidades.
+                <!-- Producto 2 -->
+                <div class="product-card card-2">
+                    <div class="product-header">
+                        <div class="product-icon">🕯️</div>
+                        <span class="badge-pill">Bienestar & aroma</span>
+                    </div>
+                    <div class="product-title">Velas “Nube suave”</div>
+                    <div class="product-description">
+                        Velas aromáticas en envases de vidrio esmerilado con etiquetas en tonos azul y celeste pastel. 
+                        Aromas suaves como lavanda, vainilla y algodón limpio acompañan tus momentos de lectura, estudio o descanso sin saturar el ambiente.
+                    </div>
+                    <div class="product-extra">
+                        Tiempo de combustión aproximado: 25 horas por vela. Perfectas para espacios íntimos y rutinas de autocuidado.
+                    </div>
+                    <div class="price-container">
+                        <div>
+                            <div class="price-label">Desde</div>
+                            <div class="price">$9.900</div>
+                            <div class="price-note">Pack de 3 unidades • Recarga disponible</div>
+                        </div>
+                        <button type="button" class="btn-card">
+                            Encender ambiente
+                        </button>
+                    </div>
                 </div>
-                <div class="price-container">
-                    <span class="price-label">Desde</span>
-                    <span class="price">$7.800</span>
+
+                <!-- Producto 3 -->
+                <div class="product-card card-3">
+                    <div class="product-header">
+                        <div class="product-icon">🎨</div>
+                        <span class="badge-pill">Escritorio creativo</span>
+                    </div>
+                    <div class="product-title">Set de papelería “Sueños pastel”</div>
+                    <div class="product-description">
+                        Un kit completo para journaling, planificación y notas bonitas: libreta en degradé lila-rosa, 
+                        stickers temáticos, bloc de notas adhesivas y cintas washi coordinadas. 
+                        Ideal para quienes aman organizar su día con creatividad.
+                    </div>
+                    <div class="product-extra">
+                        Papeles libres de ácido, aptos para marcadores y plumones, pensados para uso diario.
+                    </div>
+                    <div class="price-container">
+                        <div>
+                            <div class="price-label">Desde</div>
+                            <div class="price">$15.500</div>
+                            <div class="price-note">Edición limitada • Incluye sobre reutilizable</div>
+                        </div>
+                        <button type="button" class="btn-card">
+                            Organizar con estilo
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Cómo funciona la experiencia -->
+    <section class="how-section">
+        <div class="container">
+            <h2 class="section-title">¿Cómo funcionaría tu marketplace pastel?</h2>
+            <p class="section-subtitle">
+                Esta landing puede ser el primer contacto con tus clientes: presentas tu propuesta, muestras tus productos clave 
+                y explicas de forma simple cómo es la experiencia de compra en tu plataforma.
+            </p>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Explorar el catálogo</div>
+                        <p class="step-text">
+                            La persona llega a esta landing y descubre tus categorías y productos destacados, 
+                            entendiendo de inmediato el estilo y la calidad de lo que ofreces.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Elegir sus favoritos</div>
+                        <p class="step-text">
+                            A través de tarjetas claras y visuales, selecciona los productos que encajan mejor con su hogar, 
+                            su rutina o el regalo que quiere hacer.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Confirmar la experiencia</div>
+                        <p class="step-text">
+                            Luego, tu flujo de compra (fuera de esta landing) se encarga de la magia: pagos, envíos y seguimiento, 
+                            manteniendo siempre la estética y el tono pastel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-pastel-solid">
+                    Quiero usar esta landing para mi marketplace
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer simple (sin links externos) -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">🎀 Marketplace Pastel — Tu tienda de estilo y elegancia</p>
-                <p class="footer-credit">&copy; 2025 Todos los derechos reservados • Diseñado con amor y cariño</p>
-            </div>
+            <p class="mb-1">
+                <span class="footer-highlight">Marketplace Pastel</span> es una landing de ejemplo para presentar tu catálogo en tonos suaves.
+            </p>
+            <p class="mb-0">
+                Puedes adaptar textos, productos y estilos para que se alineen con tu marca y tu propuesta de valor.
+            </p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS (para responsive, aunque aquí no hay links a otras páginas) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
